@@ -55,3 +55,24 @@ object. How is *ph->head()* interpreted if the base class defines head() as a
 a. Regular nonvirtual method
 b. Virtual method
 780 Chapter 13 Class Inheritance**
+when the function is nonvirtual, it will invoke the function in the base class, but if the function is virtual it will invoke the function in the derived class
+
+**14. What’s wrong, if anything, with the following code?***
+```
+class Kitchen
+{
+private:
+double kit_sq_ft;
+public:
+Kitchen() {kit_sq_ft = 0.0; }
+virtual double area() const { return kit_sq_ft * kit_sq_ft; }
+};
+class House : public Kitchen
+{
+private:
+double all_sq_ft;
+public:
+House() {all_sq_ft += kit_sq_ft;}
+double area(const char *s) const { cout << s; return all_sq_ft; }
+};
+```
