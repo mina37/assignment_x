@@ -62,17 +62,17 @@ when the function is nonvirtual, it will invoke the function in the base class, 
 class Kitchen
 {
 private:
-double kit_sq_ft;
+  double kit_sq_ft;
 public:
-Kitchen() {kit_sq_ft = 0.0; }
-virtual double area() const { return kit_sq_ft * kit_sq_ft; }
+  Kitchen() {kit_sq_ft = 0.0; }
+  virtual double area() const { return kit_sq_ft * kit_sq_ft; }
 };
 class House : public Kitchen
 {
 private:
-double all_sq_ft;
+  double all_sq_ft;
 public:
-House() {all_sq_ft += kit_sq_ft;}
-double area(const char *s) const { cout << s; return all_sq_ft; }
+  House() {all_sq_ft += kit_sq_ft;}
+  double area(const char *s) const { cout << s; return all_sq_ft; }
 };
 ```
