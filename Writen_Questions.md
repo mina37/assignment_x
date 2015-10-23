@@ -76,3 +76,4 @@ public:
   double area(const char *s) const { cout << s; return all_sq_ft; }
 };
 ```
+it logical that the kitchen should be derived from the house, but what's wrong is, that the `double kit_sq_ft` should be defined as public or protected not private
