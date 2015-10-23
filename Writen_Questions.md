@@ -3,7 +3,7 @@
 ## BN: 33846
 -
 **1. What does a derived class inherit from a base class?**
-it iherites all its properties and methods, except for the overridden methods
+it iherites all its properties and methods, except for the overridden methods and except all the private members
 
 **2. What doesn’t a derived class inherit from a base class?**
 all the overridden methods as well as the constructors
@@ -31,3 +31,19 @@ when it uses different data members than the base class, and if it initializes m
 **8. Can you assign the address of an object of a derived class to a pointer to the base
 class? Can you assign the address of an object of a base class to a pointer to the
 derived class?**
+we can assign the address of an object of the derived class to a pointer of the base class, but we can't assign the address of an object of the base class to a point of the derived class
+
+**9. Can you assign an object of a derived class to an object of the base class? Can you
+assign an object of a base class to an object of the derived class?**
+an object of the derived class can be assigned to an object of the base class, but an object of the base class can't be assigned to an object of the derived class, except if the assignment is defined through an assignment operator in the derived class, or constructor with the base class as argument
+
+**10. Suppose you define a function that takes a reference to a base-class object as an
+argument.Why can this function also use a derived-class object as an argument?**
+because a pointer of the base class can point to the address of an object of the derived class
+
+**11. Suppose you define a function that takes a base-class object as an argument (that is,
+the function passes a base-class object by value).Why can this function also use a
+derived-class object as an argument?**
+because the copy action that the function does, invokes the base class constructor which in turn creates a reference to the base class which can point to an address of a derived class
+
+**12. Why is it usually better to pass objects by reference than by value?**
