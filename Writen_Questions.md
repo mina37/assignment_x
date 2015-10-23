@@ -47,3 +47,11 @@ derived-class object as an argument?**
 because the copy action that the function does, invokes the base class constructor which in turn creates a reference to the base class which can point to an address of a derived class
 
 **12. Why is it usually better to pass objects by reference than by value?**
+because it doesn't do the processing of copying the object, rather it just saves reference to that object, its only not prefered when the function will need to modify an object that must not be modified
+
+**13. Suppose Corporation is a base class and PublicCorporation is a derived class.Also
+suppose that each class defines a head() member function, that ph is a pointer to the Corporation type, and that ph is assigned the address of a PublicCorporation
+object. How is *ph->head()* interpreted if the base class defines head() as a
+a. Regular nonvirtual method
+b. Virtual method
+780 Chapter 13 Class Inheritance**
